@@ -54,5 +54,5 @@ class Message {
 let recipients: Array<string> = Array();
 recipients.push(device_token);
 
-let message = new Message('hola2', 'icon', 'body', recipients);
+let message = new Message('hola devel', 'icon', 'body', recipients);
 message.sendMessage();
