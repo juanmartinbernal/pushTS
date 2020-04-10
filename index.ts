@@ -22,7 +22,7 @@ sender.sendNoRetry(message,recipients, (err, response) => {
   else console.log(response);
 });*/
 
-class Message {
+export class Message {
   private title: string;
   private icon: string;
   private body: string;
