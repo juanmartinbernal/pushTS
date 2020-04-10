@@ -23,10 +23,10 @@ sender.sendNoRetry(message,recipients, (err, response) => {
 });*/
 
 export class Message {
-  private title: string;
-  private icon: string;
-  private body: string;
-  private recipients: string[];
+  title: string;
+  icon: string;
+  body: string;
+  recipients: string[];
 
   constructor(title: string, icon: string, body: string, recipients: string[]) {
     this.title = title;
@@ -51,8 +51,8 @@ export class Message {
   }
 }
 //let recipients = [device_token];
-let recipients: Array<string> = Array();
+/*let recipients: Array<string> = Array();
 recipients.push(device_token);
 
 let message = new Message('hola devel', 'icon', 'body', recipients);
-message.sendMessage();
+message.sendMessage();*/

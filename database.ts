@@ -14,8 +14,16 @@ client.connect();
 client
   .query('SELECT * FROM customers')
   .then((response) => {
-    console.log(response.rows[0].device_id);
-    sendMessage(response.rows[0].message, response.rows[0].device_id);
+    response.rows.forEach((element) => {
+      let message = element.message;
+      let recipients = element.device_id;
+      //console.log(result.title);
+      //recipients.push(recipients);
+      sendMessage(message, recipients);
+    });
+
+
+    
     client.end();
   })
   .catch((err) => {
