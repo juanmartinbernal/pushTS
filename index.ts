@@ -7,21 +7,6 @@ let sender = new gcm.Sender(server_token);
 var device_token =
   'eSQhdyQ7UuU:APA91bGlYdyr-af80L_EnONQEFJRgwtS6Hi06tjhTcMnsxdEHYTuXR0Rb8TyXWu_cSnnhB5mCFHLKyQnhq9wKIQ1HCHnGiPHrmjsSQoPVPGiETIeukzIS4N09ByysYF7xcIiRIEDs128';
 
-/*let message = new gcm.Message({
-    notification: {
-        title: "Test notification hola",
-        icon: "Icon name",
-        body: "Here is a notification's"
-    },
-});
-
-
-let recipients = [device_token];// gcm.IRecipient = { to: "/topics/all" };
-sender.sendNoRetry(message,recipients, (err, response) => {
-  if (err) console.error(err);
-  else console.log(response);
-});*/
-
 export class Message {
   title: string;
   icon: string;

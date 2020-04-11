@@ -1,4 +1,4 @@
-const { Client } = require('pg');
+import  Client  = require('pg');
 import { Message } from './Index';
 
 const connectionData = {
@@ -8,7 +8,7 @@ const connectionData = {
   password: 'sapadm123',
   port: 5432,
 };
-const client = new Client(connectionData);
+const client = new Client.Client(connectionData);
 
 client.connect();
 client
@@ -22,8 +22,6 @@ client
       sendMessage(message, recipients);
     });
 
-
-    
     client.end();
   })
   .catch((err) => {
@@ -31,7 +29,9 @@ client
   });
 
 /**
- * sendMessage
+ * SendMessage
+ * @param message 
+ * @param devideId 
  */
 function sendMessage(message: string, devideId: string) {
   let recipients: Array<string> = Array();
